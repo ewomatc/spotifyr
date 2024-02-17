@@ -1,0 +1,9 @@
+how I setup this project
+
+configure the project with vite. 
+install dependencies
+run the initial vite app
+check tailwind docs on how to initialize/configure tailwind with postcss
+confirm that tailwind works
+remove default vite files
+happy building
