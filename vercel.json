@@ -17,6 +17,5 @@
       "source": "/:path*",
       "destination": "/dist/:path*"
     }
-  ],
-  "root": "spotifyr"
+  ]
 }
