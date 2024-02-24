@@ -10,5 +10,6 @@ export default defineConfig(({ command, mode }) => {
 			__APP_ENV__: JSON.stringify(env.APP_ENV),
 		},
 		root: "src",
+		build: { manifest: true, outDir: "dist" },
 	};
 })
