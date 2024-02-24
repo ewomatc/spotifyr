@@ -1,4 +1,6 @@
-const CLIENT_ID = "ce171329af7d47478ec8b1f61c6ce4fb";
+import { ACCESS_TOKEN, EXPIRES_IN, TOKEN_TYPE } from "../common";
+
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
 const scopes =
 	"user-top-read user-follow-read playlist-read-private user-library-read";
 const redirect_uri = "http://localhost:3030/login/login.html";
@@ -18,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // set the items gotten from the popup window to loalstorage
 window.setItemsInLocalStorage = ({ accessToken, tokenType, expiresIn }) => {
-	localStorage.setItem("ACCESS_TOKEN", accessToken);
-	localStorage.setItem("TOKEN_TYPE", tokenType);
-	localStorage.setItem("EXPIRES_IN", expiresIn);
+	localStorage.setItem(ACCESS_TOKEN, accessToken);
+	localStorage.setItem(TOKEN_TYPE, tokenType);
+	localStorage.setItem(EXPIRES_IN, expiresIn);
 	window.location.href = APP_URL;
 };
 
