@@ -3,8 +3,8 @@ import { ACCESS_TOKEN, EXPIRES_IN, TOKEN_TYPE } from "../common";
 const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
 const scopes =
 	"user-top-read user-follow-read playlist-read-private user-library-read";
-const redirect_uri = "http://localhost:3030/login/login.html";
-const APP_URL = "http://localhost:3030";
+  const APP_URL = import.meta.env.VITE_APP_URL;
+	const redirect_uri = import.meta.env.VITE_REDIRECT_URI;
 
 const authorizeUser = () => {
 	const url = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${redirect_uri}&scope=${scopes}&show_dialog=true`;
